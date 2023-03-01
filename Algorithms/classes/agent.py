@@ -1,6 +1,4 @@
-from typing import Dict, Union, List
-
-from allocation import Allocation, UtilityTable
+from allocation_table import AllocationTable, UtilityTable
 
 
 class Agent:
@@ -8,7 +6,7 @@ class Agent:
     def __init__(self,
                  utility_table: UtilityTable,
                  weight: float,
-                 init_allocation: Allocation = None
+                 init_allocation: AllocationTable = None
                  ):
         self.utility_table = utility_table
         self.weight = weight
@@ -19,14 +17,14 @@ class Agent:
             self.allocation = init_allocation
 
     @staticmethod
-    def get_utility(table: UtilityTable, allocation: Allocation) -> float:
+    def get_utility(table: UtilityTable, allocation: AllocationTable) -> float:
         utility = 0.0
-        for (i, allocation_ratio) in enumerate(allocation.allocation):
+        for (i, allocation_ratio) in enumerate(allocation.allocation_table):
             utility += allocation_ratio * table[i]
         return utility
 
-    def set_allocation(self, allocation: Allocation):
-        assert Allocation.len == self.utility_table.len, "Keep the number of items consistent"
+    def set_allocation(self, allocation: AllocationTable):
+        assert allocation.len == self.utility_table.len, "Keep the number of items consistent"
         self.allocation = allocation
         self.utility = Agent.get_utility(self.utility_table, self.allocation)
 
