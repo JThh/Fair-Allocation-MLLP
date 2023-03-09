@@ -12,7 +12,6 @@ def find_constraints(allocation: Allocation):
 class LPSolver:
     def __init__(self, allocation: Allocation):
         ## Constraints
-
         ## Objectives (maximize Nash welfare, best Pareto efficiency)
         
 
