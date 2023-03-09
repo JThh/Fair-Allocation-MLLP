@@ -7,7 +7,6 @@ def find_constraints(allocation: Allocation):
        With fractional allocations, each agent should have no less utlity than others.
        And item fractions should sum up to one.
     '''
-    
     pass
 
 
