@@ -9,7 +9,6 @@ def find_constraints(allocation: Allocation):
     '''
     pass
 
-
 class LPSolver:
     def __init__(self, allocation: Allocation):
         ## Constraints
