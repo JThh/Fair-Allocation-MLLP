@@ -1,4 +1,4 @@
-from allocation_table import AllocationTable, UtilityTable
+from algorithms.classes.allocation_table import AllocationTable, UtilityTable
 
 
 class Agent:

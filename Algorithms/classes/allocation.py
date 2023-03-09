@@ -1,7 +1,7 @@
 from typing import List
 
-from agent import Agent
-from item import ItemState, get_allocation_from_states
+from algorithms.classes.agent import Agent
+from algorithms.classes.item import ItemState, get_allocation_from_states
 
 
 class Allocation:

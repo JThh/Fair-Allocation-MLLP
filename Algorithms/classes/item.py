@@ -1,7 +1,7 @@
 from enum import Enum
 from typing import List
 
-from allocation_table import AllocationTable
+from algorithms.classes.allocation_table import AllocationTable
 
 
 class ItemState:

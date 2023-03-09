@@ -1,5 +1,5 @@
-from ..classes import Agent, ItemState, Allocation
-from ..tools import NOTIONS, get_pareto_efficiency, get_total_utility
+from algorithms.classes import Agent, ItemState, Allocation
+from algorithms.tools import NOTIONS, get_pareto_efficiency, get_total_utility
 
 
 def find_constraints(allocation: Allocation):
@@ -7,6 +7,7 @@ def find_constraints(allocation: Allocation):
        With fractional allocations, each agent should have no less utlity than others.
        And item fractions should sum up to one.
     '''
+    
     pass
 
 
@@ -15,7 +16,7 @@ class LPSolver:
         ## Constraints
 
         ## Objectives (maximize Nash welfare, best Pareto efficiency)
-
+        
 
         # TODO: find constraints, objective functions
         # TODO: implement several LP algorithms and compare performances (converging speed, etc.)
